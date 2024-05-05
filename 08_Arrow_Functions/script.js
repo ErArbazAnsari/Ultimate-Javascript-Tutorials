@@ -32,7 +32,7 @@ function sum(a, b) {
     console.log(a + b);
 }
 
-// in return funtion
+// in return function
 // div(a, b);
 // const div = (a, b) => a / b;
 
