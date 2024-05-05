@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Selectors</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .bg-green {
+            background-color: greenyellow;
+            border: 2px solid red;
+            padding: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .bg-green:active {
+            background-color: aqua;
+        }
+
+        .underline {
+            text-decoration: dotted underline;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="block">
+        <p class="para">Welcome to our website</p>
+    </nav>
+    <div class="block">
+        <h2>the username is <span id='username'>ErArbazAnsari</span></h2>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem sunt officia dolores ducimus ut
+            velautem a tempore qui quas?</h3>
+
+        <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptas!</pre>
+    </div>
+
+    <script>
+        const el = document.getElementById('username');
+        el.style.color = 'red';
+        console.log(el);
+        el.classList.remove('red');
+        el.classList.add('bg-green');
+
+        const heading = document.querySelector('.para');
+        heading.classList.add('underline');
+        console.log(heading);
+        document.body.remove();
+    </script>
+</body>
+
+</html>

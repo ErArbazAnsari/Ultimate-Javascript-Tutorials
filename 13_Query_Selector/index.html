@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selectors in Javascript</title>
+</head>
+
+<body>
+    <nav class="block">
+        <p class="paragram">Welcome to our website</p>
+    </nav>
+    <div class="block">
+        <h2>the username is <span id='username'>ErArbazAnsari</span></h2>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem sunt officia dolores ducimus ut velautem a tempore qui quas?</h3>
+
+        <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptas!</pre>
+    </div>
+
+    <script>
+        let body = document.querySelector("body");
+        console.log(body);
+
+        // body.innerHTML = "<h1>Hacked!!</h1>"; 
+        console.log(body.innerText);
+        document.querySelector('#username').innerHTML = "Happy";
+    </script>
+</body>
+
+</html>
