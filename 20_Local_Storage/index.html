@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage In JavaScript</title>
+</head>
+
+<body style="text-align: center; font-size: 1.5rem;">
+    <input type="email" name="" id="email" placeholder="Enter Email">
+    <br>
+    <input type="text" name="" id="uname" placeholder="Enter UserName">
+    <br><br>
+    <button type="submit" id="submit">Submit</button>
+    <h3>My Name is <span id="yourName"></span></h3>
+    <h3>My Email is <span id="yourEmail"></span></h3>
+    <script>
+        const email = document.getElementById('email');
+        const uname = document.getElementById('uname');
+        const submit = document.getElementById('submit');
+        const yourName = document.getElementById('yourName');
+        const yourEmail = document.getElementById('yourEmail');
+
+        submit.addEventListener('click', () => {
+            const emailValue = email.value;
+            const unameValue = uname.value;
+            localStorage.setItem('userEmail', emailValue);
+            localStorage.setItem('userName', unameValue);
+            yourName.innerHTML = unameValue;
+            yourEmail.innerHTM
+            yourEmail.innerHTML = emailValue;L = emailValue;
+            // window.document.location.reload();
+        });
+
+        window.addEventListener('load', () => {
+            const name = localStorage.getItem('userName');
+            const email = localStorage.getItem('userEmail');
+            yourName.innerHTML = name;
+            yourEmail.innerHTML = email;
+        })
+    </script>
+</body>
+
+</html>
