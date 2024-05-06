@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition in Javascript</title>
+</head>
+
+<body>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+        function square(a) {
+            return a * a;
+        }
+
+        // function addAndMul(a, b) {
+        //     return (square(add(a, b)))
+        // }
+        // console.log(addAndMul(10, 10))
+
+        function composeTwoFunction(fn1, fn2) {
+            return function (a, b) {
+                return fn2(fn1(a, b));
+            }
+        }
+
+        const myTast = composeTwoFunction(add, square)
+        console.log(myTast(10, 10));
+    </script>
+</body>
+
+</html>
